@@ -1,0 +1,21 @@
+<Shell
+    x:Class="HesapMakinesi.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:HesapMakinesi"
+    Shell.FlyoutBehavior="Flyout" 
+    Title="HesapMakinesi">
+
+
+    <!-- Standart Hesap Makinesi -->
+    <ShellContent Title="Standart"
+                      ContentTemplate="{DataTemplate local:MainPage}">
+    </ShellContent>
+
+    <!-- Bilimsel Hesap Makinesi -->
+    <ShellContent Title="Bilimsel"
+                      ContentTemplate="{DataTemplate local:Bilimsel}">
+    </ShellContent>
+
+
+</Shell>

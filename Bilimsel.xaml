@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HesapMakinesi.Bilimsel"
+             Title="Bilimsel Hesap Makinesi">
+    <VerticalStackLayout Padding="20" VerticalOptions="Center">
+
+        <!-- Giriş ekranı -->
+        <Entry x:Name="Display" IsReadOnly="True" FontSize="30" 
+               HorizontalTextAlignment="End" Margin="0,15" />
+
+        <!-- Bilimsel Hesaplama Tuşları -->
+        <Grid ColumnDefinitions="*,*,*,*,*" 
+      RowDefinitions="*,*,*,*,*,*,*,*"  
+              ColumnSpacing="5" RowSpacing="5">
+
+            <!-- Üst Satır -->
+            <Button Text="2^x" Grid.Row="0" Grid.Column="0" Clicked="OnScientificOperationClicked" BackgroundColor="LightBlue"/>
+            <Button Text="pi" Grid.Row="0" Grid.Column="1" Clicked="OnScientificOperationClicked" BackgroundColor="LightBlue"/>
+            <Button Text="e" Grid.Row="0" Grid.Column="2" Clicked="OnScientificOperationClicked" BackgroundColor="LightBlue"/>
+            <Button Text="CE" Grid.Row="0" Grid.Column="3" Clicked="OnClearEntryClicked" BackgroundColor="LightBlue" />
+            <Button Text="⌫" Grid.Row="0" Grid.Column="4" Clicked="OnBackspaceClicked" BackgroundColor="LightBlue"/>
+
+            <!-- İkinci Satır -->
+            <Button Text="x²" Grid.Row="1" Grid.Column="0" Clicked="OnScientificOperationClicked" BackgroundColor="LightBlue"/>
+            <Button Text="1/x" Grid.Row="1" Grid.Column="1" Clicked="OnScientificOperationClicked" BackgroundColor="LightBlue"/>
+            <Button Text="|x|" Grid.Row="1" Grid.Column="2" Clicked="OnScientificOperationClicked" BackgroundColor="LightBlue"/>
+            <Button Text="exp" Grid.Row="1" Grid.Column="3" Clicked="OnScientificOperationClicked" BackgroundColor="LightBlue"/>
+            <Button Text="mod" Grid.Row="1" Grid.Column="4" Clicked="OnOperationClicked" BackgroundColor="LightBlue"/>
+
+            <!-- Üçüncü Satır -->
+            <Button Text="karekok" Grid.Row="2" Grid.Column="0" Clicked="OnScientificOperationClicked" BackgroundColor="LightBlue"/>
+            <Button Text="(" Grid.Row="2" Grid.Column="1" Clicked="OnScientificOperationClicked" BackgroundColor="LightBlue"/>
+            <Button Text=")" Grid.Row="2" Grid.Column="2" Clicked="OnScientificOperationClicked" BackgroundColor="LightBlue"/>
+            <Button Text="!" Grid.Row="2" Grid.Column="3" Clicked="OnScientificOperationClicked" BackgroundColor="LightBlue"/>
+            <Button Text="/" Grid.Row="2" Grid.Column="4" Clicked="OnOperationClicked" BackgroundColor="LightBlue"/>
+
+            <!-- Dördüncü Satır -->
+            <Button Text="x^y" Grid.Row="3" Grid.Column="0" Clicked="OnScientificOperationClicked" BackgroundColor="LightBlue"/>
+            <Button Text="7" Grid.Row="3" Grid.Column="1" Clicked="OnNumberClicked" BackgroundColor="LightBlue"/>
+            <Button Text="8" Grid.Row="3" Grid.Column="2" Clicked="OnNumberClicked" BackgroundColor="LightBlue"/>
+            <Button Text="9" Grid.Row="3" Grid.Column="3" Clicked="OnNumberClicked" BackgroundColor="LightBlue"/>
+            <Button Text="*" Grid.Row="3" Grid.Column="4" Clicked="OnOperationClicked" BackgroundColor="LightBlue"/>
+
+            <!-- Beşinci Satır -->
+            <Button Text="10^x" Grid.Row="4" Grid.Column="0" Clicked="OnScientificOperationClicked" BackgroundColor="LightBlue"/>
+            <Button Text="4" Grid.Row="4" Grid.Column="1" Clicked="OnNumberClicked" BackgroundColor="LightBlue"/>
+            <Button Text="5" Grid.Row="4" Grid.Column="2" Clicked="OnNumberClicked" BackgroundColor="LightBlue"/>
+            <Button Text="6" Grid.Row="4" Grid.Column="3" Clicked="OnNumberClicked" BackgroundColor="LightBlue"/>
+            <Button Text="-" Grid.Row="4" Grid.Column="4" Clicked="OnOperationClicked" BackgroundColor="LightBlue"/>
+
+            <!-- Altıncı Satır -->
+            <Button Text="log" Grid.Row="5" Grid.Column="0" Clicked="OnScientificOperationClicked" BackgroundColor="LightBlue"/>
+            <Button Text="1" Grid.Row="5" Grid.Column="1" Clicked="OnNumberClicked" BackgroundColor="LightBlue"/>
+            <Button Text="2" Grid.Row="5" Grid.Column="2" Clicked="OnNumberClicked" BackgroundColor="LightBlue"/>
+            <Button Text="3" Grid.Row="5" Grid.Column="3" Clicked="OnNumberClicked" BackgroundColor="LightBlue"/>
+            <Button Text="+" Grid.Row="5" Grid.Column="4" Clicked="OnOperationClicked" BackgroundColor="LightBlue"/>
+
+            <!-- Yedinci Satır -->
+            <Button Text="ln" Grid.Row="6" Grid.Column="0" Clicked="OnScientificOperationClicked" BackgroundColor="LightBlue"/>
+            <Button Text="+/-" Grid.Row="6" Grid.Column="1" Clicked="OnChangeSignClicked" BackgroundColor="LightBlue"/>
+            <Button Text="0" Grid.Row="6" Grid.Column="2" Clicked="OnNumberClicked" BackgroundColor="LightBlue"/>
+            <Button Text="." Grid.Row="6" Grid.Column="3" Clicked="OnNumberClicked" BackgroundColor="LightBlue"/>
+            <Button Text="=" Grid.Row="6" Grid.Column="4" Clicked="OnEqualsClicked" BackgroundColor="LightBlue"/>
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>

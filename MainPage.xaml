@@ -1,0 +1,51 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HesapMakinesi.MainPage">
+
+    <Grid Padding="20" RowSpacing="10" ColumnSpacing="10">
+
+        <Grid.RowDefinitions>
+     <RowDefinition Height="*"/>
+     <RowDefinition Height="*"/>
+     <RowDefinition Height="*"/>
+     <RowDefinition Height="*"/>
+     <RowDefinition Height="*"/>
+     <RowDefinition Height="*"/>
+ </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+
+        <Entry x:Name="Display" Grid.Row="0" Grid.ColumnSpan="4" 
+               FontSize="32" HorizontalOptions="FillAndExpand"
+               VerticalOptions="CenterAndExpand" IsReadOnly="True" />
+
+        
+        <Button Text="7" Grid.Row="1" Grid.Column="0" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
+        <Button Text="8" Grid.Row="1" Grid.Column="1" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
+        <Button Text="9" Grid.Row="1" Grid.Column="2" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
+        <Button Text="/" Grid.Row="1" Grid.Column="3" Clicked="OnOperatorClicked" BackgroundColor="LightBlue"/>
+
+        <Button Text="4" Grid.Row="2" Grid.Column="0" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
+        <Button Text="5" Grid.Row="2" Grid.Column="1" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
+        <Button Text="6" Grid.Row="2" Grid.Column="2" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
+        <Button Text="*" Grid.Row="2" Grid.Column="3" Clicked="OnOperatorClicked" BackgroundColor="LightBlue"/>
+
+        <Button Text="1" Grid.Row="3" Grid.Column="0" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
+        <Button Text="2" Grid.Row="3" Grid.Column="1" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
+        <Button Text="3" Grid.Row="3" Grid.Column="2" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
+        <Button Text="-" Grid.Row="3" Grid.Column="3" Clicked="OnOperatorClicked" BackgroundColor="LightBlue"/>
+
+        <Button Text="C" Grid.Row="4" Grid.Column="0" Clicked="OnClearClicked" BackgroundColor="LightBlue"/>
+        <Button Text="0" Grid.Row="4" Grid.Column="1" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
+        <Button Text="." Grid.Row="4" Grid.Column="2" Clicked="OnDigitClicked" BackgroundColor="LightBlue"/>
+        <Button Text="+" Grid.Row="4" Grid.Column="3" Clicked="OnOperatorClicked" BackgroundColor="LightBlue"/>
+
+        <Button Text="=" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4" Clicked="OnCalculateClicked" BackgroundColor="LightBlue"/>
+    </Grid>
+</ContentPage>
